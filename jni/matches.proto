@@ -1,0 +1,17 @@
+package sfm;
+
+option java_package = "cvg.sfmPipeline.main";
+option java_outer_classname = "MatchesOutMessage";
+
+message DMatches {
+    optional uint32 queryIdx = 1;
+    optional uint32 trainIdx = 2;
+    optional uint32 imgIdx = 3;
+    optional float distance =4;
+}
+
+message MatchesProto {
+    optional fixed64 imageLseq = 1;
+    optional fixed64 imageRseq = 2;
+    repeated DMatches matches = 3;
+}

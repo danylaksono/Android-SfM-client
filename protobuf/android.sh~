@@ -1,0 +1,7 @@
+export NDK=/home/fede/AndroidSDK/android-ndk-r8
+PREBUILT=/home/fede/AndroidSDK/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3
+PLATFORM=/home/fede/AndroidSDK/android-ndk-r8b/platforms/android-3/arch-arm/
+export CFLAGS="-march=armv7-a -mfloat-abi=softfp -DGOOGLE_PROTOBUF_NO_RTTI"
+export CC="/home/fede/AndroidSDK/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc"
+export SYSROOT=$NDK/platforms/android-9/arch-arm
+./configure --host=arm-eabi --with-sysroot=$SYSROOT CC=$CC --enable-cross-compile --with-protoc=protoc LIBS="-lc"

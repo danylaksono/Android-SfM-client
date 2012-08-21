@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item  android:title="Calibration"
+        android:orderInCategory="1"
+        android:showAsAction="always" >
+	     <menu>
+	         <item android:id="@+id/loadCalib"
+	               android:title="Load"/>
+	         <item android:id="@+id/doCalib"
+	               android:title="Calibrate"/>
+	     </menu>
+     </item>
+     
+     <item android:id="@+id/viewRecon"
+        android:title="View Reconstruction"
+        android:orderInCategory="2"
+        android:showAsAction="always" />
+    
+     <item android:id="@+id/frameProcesOpts"
+        android:title="Frame options"
+        android:orderInCategory="3"
+        android:showAsAction="always">
+	     <menu>
+	         <group android:id="@+id/frameOpts" android:checkableBehavior="all">
+	             <item android:id="@+id/sendJPEG" android:title="Send JPEG"/>
+	             <item android:id="@+id/doSURF" android:title="Perform SURF" android:checked="true"/>
+	             <item android:id="@+id/doMatching" android:title="Perform Matching"/>
+	         </group>
+	     </menu>
+	 </item>
+    
+    <item android:id="@+id/camInfo"
+        android:title="Camera Info"
+        android:orderInCategory="4"
+        android:showAsAction="never" />
+    
+    <item android:id="@+id/sfmOpts"
+        android:title="Reconstruction Options"
+        android:orderInCategory="5"
+        android:showAsAction="never" />
+</menu>
